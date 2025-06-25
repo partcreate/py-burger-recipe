@@ -38,7 +38,7 @@ class Number(Validator):
 
 
 class OneOf(Validator):
-    def __init__(self, options: tuple[str, str, str]) -> None:
+    def __init__(self, options: tuple[str, ...]) -> None:
         self.options = options
 
     def validate(self, value: Any) -> None:
